@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class ChangeColor : MonoBehaviour
 {
-    public Material handColor;
-    // Start is called before the first frame update
+    public List<GameObject> prefabs;
     void Start()
     {
-        handColor.color = Color.black;
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void Spawn(int index)
+    {
+        Instantiate(prefabs[index], transform.position, transform.rotation);
     }
 }
