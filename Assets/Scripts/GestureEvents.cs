@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeColor : MonoBehaviour
+public class GestureEvents : MonoBehaviour
 {
     public List<GameObject> prefabs;
     void Start()
