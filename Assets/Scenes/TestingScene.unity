@@ -353,7 +353,19 @@ MonoBehaviour:
     - {x: -0.056889895, y: -0.022083046, z: 0.018987786}
     onRecognized:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1775806366}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: ChangeColor
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - name: Peace
     fingerData:
     - {x: 0, y: 0, z: 0}
@@ -382,7 +394,19 @@ MonoBehaviour:
     - {x: -0.053426333, y: -0.05114227, z: 0.0045194034}
     onRecognized:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1775806366}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: ChangeColor
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - name: Three-Fingers
     fingerData:
     - {x: 0, y: 0, z: 0}
@@ -411,7 +435,19 @@ MonoBehaviour:
     - {x: -0.041813064, y: -0.044567104, z: 0.005792227}
     onRecognized:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1775806366}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: ChangeColor
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - name: One-Finger
     fingerData:
     - {x: 0, y: 0, z: 0}
@@ -440,7 +476,19 @@ MonoBehaviour:
     - {x: -0.042111978, y: -0.038897723, z: 0.0074389707}
     onRecognized:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1775806366}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: ChangeColor
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - name: Four-Fingers
     fingerData:
     - {x: 0, y: 0, z: 0}
@@ -469,7 +517,19 @@ MonoBehaviour:
     - {x: -0.14014292, y: -0.020557148, z: 0.07231024}
     onRecognized:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1775806366}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: ChangeColor
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 4
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - name: Fist
     fingerData:
     - {x: 0, y: 0, z: 0}
@@ -498,7 +558,19 @@ MonoBehaviour:
     - {x: -0.046578027, y: -0.028843066, z: 0.013474841}
     onRecognized:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1775806366}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: ChangeColor
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 5
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - name: O-Circle
     fingerData:
     - {x: 0, y: 0, z: 0}
@@ -527,7 +599,19 @@ MonoBehaviour:
     - {x: -0.052908625, y: -0.028699093, z: 0.013018345}
     onRecognized:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1775806366}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: ChangeColor
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 6
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - name: Half-O-Circle
     fingerData:
     - {x: 0, y: 0, z: 0}
@@ -556,7 +640,19 @@ MonoBehaviour:
     - {x: -0.04669023, y: -0.03269733, z: 0.01067741}
     onRecognized:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1775806366}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: ChangeColor
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 7
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   debugMode: 1
 --- !u!1001 &523123699
 PrefabInstance:
@@ -733,7 +829,6 @@ GameObject:
   - component: {fileID: 898590119}
   - component: {fileID: 898590118}
   - component: {fileID: 898590117}
-  - component: {fileID: 898590116}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -741,20 +836,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &898590116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 898590115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4f5e93623245294da884855e52f33fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabs: []
-  cube: {fileID: 0}
 --- !u!65 &898590117
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -825,7 +906,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898590115}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.422288, y: 3.5465822, z: 2.6196275}
+  m_LocalPosition: {x: 0, y: 0.83, z: 4.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -864,6 +945,15 @@ MonoBehaviour:
   - {fileID: 7468006875230007201, guid: 0706bb0a094e58f4a96db5268f7121b2, type: 3}
   - {fileID: 3837463114214450159, guid: e4a9a2022dd5a8d48a652d772b004374, type: 3}
   cube: {fileID: 898590115}
+  colors:
+  - {r: 0.25410545, g: 0.990566, b: 0, a: 0}
+  - {r: 1, g: 0.042452812, b: 0.042452812, a: 0}
+  - {r: 1, g: 0, b: 0.76761675, a: 0}
+  - {r: 0.8624314, g: 1, b: 0, a: 0}
+  - {r: 0.0528183, g: 0, b: 1, a: 0}
+  - {r: 0, g: 1, b: 0.8273995, a: 0}
+  - {r: 1, g: 0.7202713, b: 0, a: 0}
+  - {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 0}
 --- !u!4 &1775806367
 Transform:
   m_ObjectHideFlags: 0
