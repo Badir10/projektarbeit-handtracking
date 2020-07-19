@@ -5,18 +5,15 @@ using UnityEngine;
 public class GestureEvents : MonoBehaviour
 {
     public List<GameObject> prefabs;
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject cube;
 
     public void Spawn(int index)
     {
         Instantiate(prefabs[index], transform.position, transform.rotation);
+    }
+
+    public void ChangeColor(Color color)
+    {
+        cube.GetComponent<Renderer>().material.color = color;
     }
 }
