@@ -9,6 +9,7 @@ public struct Gesture
     public string name;
     public List<Vector3> fingerData;
     public UnityEvent onRecognized;
+    public UnityEvent notRecognized;
 } 
 
 public class GestureDetector : MonoBehaviour
@@ -38,13 +39,28 @@ public class GestureDetector : MonoBehaviour
 
         Gesture currentGesture = Recognize();
         bool hasRecognized = !currentGesture.Equals(new Gesture());
+        
+        if (!hasRecognized)
+        {
+            if (!previousGesture.Equals(new Gesture()))
+            {
+                Debug.Log("No Gesture recognized!");
+                previousGesture.notRecognized.Invoke();
+            }
+            
+        }
+        
 
         if (hasRecognized && !currentGesture.Equals(previousGesture))
         {
             Debug.Log("New gesture found! " + currentGesture.name);
-            previousGesture = currentGesture;
+            if (!previousGesture.Equals(new Gesture()))
+            {
+                previousGesture.notRecognized.Invoke();
+            }
             currentGesture.onRecognized.Invoke();
         }
+        previousGesture = currentGesture;
     }
 
     void Save()
@@ -89,7 +105,6 @@ public class GestureDetector : MonoBehaviour
                 currentGesture = gesture;
             }
         }
-
         return currentGesture;
     }
 }

@@ -1092,6 +1092,21 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1775806366}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureNotRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 5
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - name: Mittelfinger-Touch
     fingerData:
     - {x: 0, y: 0, z: 0}
@@ -1119,6 +1134,9 @@ MonoBehaviour:
     - {x: -0.15805243, y: -0.059051882, z: 0.036783658}
     - {x: -0.13862017, y: -0.031361587, z: 0.07117935}
     onRecognized:
+      m_PersistentCalls:
+        m_Calls: []
+    notRecognized:
       m_PersistentCalls:
         m_Calls: []
   - name: Ringfinger-Touch
@@ -1150,6 +1168,9 @@ MonoBehaviour:
     onRecognized:
       m_PersistentCalls:
         m_Calls: []
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls: []
   - name: Pinky-Touch
     fingerData:
     - {x: 0, y: 0, z: 0}
@@ -1177,6 +1198,9 @@ MonoBehaviour:
     - {x: -0.16630045, y: -0.045471903, z: 0.036324676}
     - {x: -0.08652038, y: -0.06470707, z: 0.016095802}
     onRecognized:
+      m_PersistentCalls:
+        m_Calls: []
+    notRecognized:
       m_PersistentCalls:
         m_Calls: []
   debugMode: 1
@@ -1250,6 +1274,21 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1775806366}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureNotRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 4
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - name: Peace
     fingerData:
     - {x: 0, y: 0, z: 0}
@@ -1282,6 +1321,21 @@ MonoBehaviour:
         - m_Target: {fileID: 1775806366}
           m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
           m_MethodName: GestureRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 6
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1775806366}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureNotRecognized
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1332,6 +1386,21 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1775806366}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureNotRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - name: One-Finger
     fingerData:
     - {x: 0, y: 0, z: 0}
@@ -1364,6 +1433,21 @@ MonoBehaviour:
         - m_Target: {fileID: 1775806366}
           m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
           m_MethodName: GestureRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1775806366}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureNotRecognized
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1414,6 +1498,21 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1775806366}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureNotRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - name: Fist
     fingerData:
     - {x: 0, y: 0, z: 0}
@@ -1455,6 +1554,21 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1775806366}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureNotRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - name: O-Circle
     fingerData:
     - {x: 0, y: 0, z: 0}
@@ -1482,6 +1596,9 @@ MonoBehaviour:
     - {x: -0.054823946, y: -0.030472375, z: 0.00010051529}
     - {x: -0.052908625, y: -0.028699093, z: 0.013018345}
     onRecognized:
+      m_PersistentCalls:
+        m_Calls: []
+    notRecognized:
       m_PersistentCalls:
         m_Calls: []
   - name: Half-O-Circle
@@ -1525,6 +1642,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls: []
   debugMode: 1
 --- !u!1 &513943413
 GameObject:

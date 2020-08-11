@@ -18,7 +18,6 @@ public class GestureEvents : MonoBehaviour
     public void ChangeColor(int index)
     {
         cube.GetComponent<Renderer>().material.color = colors[index];
-        
     }
 
     public void ChangeColorBack()
@@ -34,21 +33,12 @@ public class GestureEvents : MonoBehaviour
     
     public void GestureRecognized(int index)
     {
+        //Invoke("ChangeColorBack", 1);
         gestureSprites[index].color = Color.white;
-        Invoke("ChangeColorBack", 1);
-        
-        
-        //gestureSprites[index].material.SetColor("_Color", Color.white);
+    }
 
-        /*if (IsInvoking())
-        {
-            //gestureSprites[index].color = Color.white;
-            gestureSprites[index].material.SetColor("_Color", Color.white);
-        }
-
-        if (!IsInvoking())
-        {
-            gestureSprites[index].material.SetColor("_Color", Color.black);
-        }*/
+    public void GestureNotRecognized(int index)
+    {
+        gestureSprites[index].color = Color.black;
     }
 }
