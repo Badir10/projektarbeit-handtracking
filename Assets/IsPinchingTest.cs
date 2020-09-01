@@ -5,20 +5,56 @@ using UnityEngine;
 
 public class IsPinchingTest : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
+    public GameObject index;
+    public GameObject middle;
+    public GameObject ring;
+    public GameObject pinky;
     void Update()
     {
         var hand = GetComponent<OVRHand>();
-        bool isIndexFingerPinching = hand.GetFingerIsPinching(OVRHand.HandFinger.Ring);
+        bool isRingFingerPinching = hand.GetFingerIsPinching(OVRHand.HandFinger.Ring);
+        bool isIndexFingerPinching = hand.GetFingerIsPinching(OVRHand.HandFinger.Index);
+        bool isPinkyFingerPinching = hand.GetFingerIsPinching(OVRHand.HandFinger.Pinky);
+        bool isMiddleFingerPinching = hand.GetFingerIsPinching(OVRHand.HandFinger.Middle);
+        
+        if (isRingFingerPinching)
+        {
+            ring.GetComponent<Renderer>().material.color = Color.green;
+            Debug.Log("Ringfinger is Pinched");
+        }
+        else
+        {
+            ring.GetComponent<Renderer>().material.color = Color.white;
+        }
         
         if (isIndexFingerPinching)
         {
-            Debug.Log("Ringfinger is Pinched");
+            index.GetComponent<Renderer>().material.color = Color.green;
+            Debug.Log("Indexfinger is Pinched");
+        }
+        else
+        {
+            index.GetComponent<Renderer>().material.color = Color.white;
+        }
+        
+        if (isPinkyFingerPinching)
+        {
+            pinky.GetComponent<Renderer>().material.color = Color.green;
+            Debug.Log("Pinkyfinger is Pinched");
+        } 
+        else
+        {
+            pinky.GetComponent<Renderer>().material.color = Color.white;
+        }
+        
+        if (isMiddleFingerPinching)
+        {
+            middle.GetComponent<Renderer>().material.color = Color.green;
+            Debug.Log("Middlefinger is Pinched");
+        } 
+        else
+        {
+            middle.GetComponent<Renderer>().material.color = Color.white;
         }
     }
 }
