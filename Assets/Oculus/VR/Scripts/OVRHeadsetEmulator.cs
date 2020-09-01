@@ -18,6 +18,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class OVRHeadsetEmulator : MonoBehaviour {
 	public enum OpMode
 	{
@@ -49,7 +50,7 @@ public class OVRHeadsetEmulator : MonoBehaviour {
 
 	private bool hasSentEvent = false;
 	private bool emulatorHasInitialized = false;
-
+	
 	// Use this for initialization
 	void Start () {
 	}
