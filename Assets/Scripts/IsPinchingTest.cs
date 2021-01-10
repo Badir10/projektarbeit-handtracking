@@ -1,14 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 
 public class IsPinchingTest : MonoBehaviour
 {
-    public GameObject index;
-    public GameObject middle;
-    public GameObject ring;
-    public GameObject pinky;
+    [SerializeField] private GameObject index;
+    [SerializeField] private GameObject middle;
+    [SerializeField] private GameObject ring;
+    [SerializeField] private GameObject pinky;
+
     void Update()
     {
         var hand = GetComponent<OVRHand>();
