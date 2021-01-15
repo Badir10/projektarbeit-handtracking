@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PositionController : MonoBehaviour
 {
+    // Dieses Skript wurde nicht von mir, Badir Al-Sayyed erstellt
     // Setzt eine statische Instanz zu dem Skript
     public static PositionController Instance;
 

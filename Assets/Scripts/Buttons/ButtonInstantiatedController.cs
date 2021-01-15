@@ -63,12 +63,12 @@ public class ButtonInstantiatedController : MonoBehaviour
     }
 
     // die beiden Methoden aendern die Skybox nachdem eine Zeit von pauseBool verstrichen ist
-    public void SkyboxUp()
+    public void ScaleInput()
     {
         if (!pauseBool)
         {
             pauseBool = true;
-            //skyboxChanger.SkyboxUp();
+            
         }
     }
     public void SkyboxDown()
