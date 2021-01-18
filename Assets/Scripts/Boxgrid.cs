@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,8 +9,8 @@ public class Boxgrid : MonoBehaviour
     [SerializeField] private int depth = 7;
     [SerializeField] private int height = 3;
     [SerializeField] private float distance = 0.02f;
+    public List<GameObject> blocks;
     
-
     public GameObject box;
 
     // Start is called before the first frame update
@@ -27,9 +28,21 @@ public class Boxgrid : MonoBehaviour
                 for (int y = 0; y < height; y++)
                 {
                     GameObject block = Instantiate(box, Vector3.zero, box.transform.rotation);
+                    blocks.Add(block);
                     block.transform.parent = transform;
                     block.transform.localPosition = new Vector3(x*distance, y*distance, z*distance);
                 }
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if (!Countdown.timerRunning)
+        {
+            foreach (GameObject go in blocks)
+            {
+                go.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             }
         }
     }

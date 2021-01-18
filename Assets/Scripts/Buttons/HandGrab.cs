@@ -10,8 +10,11 @@ public class HandGrab : OVRGrabber
     
     private OVRHand hand;
 
-    public SphereCollider fingertipGrabVol;
+    private SphereCollider fingertipGrabVol;
     private OVRSkeleton skeleton;
+    private Vector3 indexTipPos;
+
+    [SerializeField] private GameObject grabSphere;
     
     [SerializeField] private float pinchThreshold = 0.7f;
     [SerializeField] private float grabVolRadius = 0.02f;
@@ -21,23 +24,11 @@ public class HandGrab : OVRGrabber
     {
         // Fuehrt die Start-Methode des OVRGrabber aus und nimmt sich zusaetzlich das Handtracking-Prefab
         base.Start();
-        hand = GetComponent<OVRHand>();
+        hand = gameObject.GetComponent<OVRHand>();
         //
         
         // Sucht die Position der Daumenspitze und platziert an dieser Stelle einen Collider, der als GrabVolume dient
-        skeleton = GetComponent<OVRSkeleton>();
-        fingertipGrabVol = GetComponent<SphereCollider>();
-        /*foreach(OVRBone bone in skeleton.Bones) {
-            if (bone.Id == OVRSkeleton.BoneId.Hand_ThumbTip) {
-                fingertipGrabVol.center = bone.Transform.localPosition;
-                //fingertipGrabVol.radius = grabVolRadius;
-
-                //bone.Transform.gameObject.AddComponent<SphereCollider>();
-                
-            }
-        }
-        //hand.GetComponent<HandGrab>().m_grabVolumes[0] = fingertipGrabVol;
-        */
+        skeleton = gameObject.GetComponent<OVRSkeleton>();
     }
 
     public override void Update()
@@ -46,12 +37,16 @@ public class HandGrab : OVRGrabber
         base.Update();
         CheckIndexPinch();
         
+        // Verfeinerung des Grabbers, indem Collider genau an Fingerspitze platziert wird und von da aus gegrabbed wird.
+        // Vorher Grabber zu groß und Dinge wurden an falsche Position platziert beim grabben.
+        
+        // Geht alle "Knochen"-Punkte und Positionen durch und nimmt sich die Position der Zeigefingerspitze
         foreach(OVRBone bone in skeleton.Bones) {
-            if (bone.Id == OVRSkeleton.BoneId.Hand_ThumbTip) {
-                //fingertipGrabVol.center = bone.Transform.localPosition;
+            if (bone.Id == OVRSkeleton.BoneId.Hand_IndexTip) {
+                indexTipPos = bone.Transform.position;
+                grabSphere.transform.position = indexTipPos;
             }
         }
-        fingertipGrabVol.center = gameObject.transform.Find("Bones").transform.GetChild(0).transform.Find("Hand_Index1").transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).gameObject.transform.position;
     }
     
     
