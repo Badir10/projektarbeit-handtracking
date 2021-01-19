@@ -31,29 +31,59 @@ public class HandMenu : MonoBehaviour
     void Update()
     {
         //Pinches speichern
-        bool isRingFingerPinching = hand.GetFingerIsPinching(OVRHand.HandFinger.Ring);
         bool isIndexFingerPinching = hand.GetFingerIsPinching(OVRHand.HandFinger.Index);
-        bool isPinkyFingerPinching = hand.GetFingerIsPinching(OVRHand.HandFinger.Pinky);
+        bool isRingFingerPinching = hand.GetFingerIsPinching(OVRHand.HandFinger.Ring);
         bool isMiddleFingerPinching = hand.GetFingerIsPinching(OVRHand.HandFinger.Middle);
+        bool isPinkyFingerPinching = hand.GetFingerIsPinching(OVRHand.HandFinger.Pinky);
+
         
         // Menü öffnen, wenn Option gedrückt wird (5 Sekunden Zeigefinger Pinch) und das Menü nicht schon geöffnet ist
         if (OVRInput.GetDown(OVRInput.Button.Start) && !menuisOpened)
         {
+            menuisOpened = true;
+        }
+        else if (OVRInput.GetDown(OVRInput.Button.Start) && menuisOpened)
+        {
+            menuisOpened = false;
+        }
+        
+        
+        //Menü ist geöffnet
+        //Menüitems an die Positionen der Fingerspitzen platzieren
+        //Events werden durchgegeben
+        if (menuisOpened)
+        {
+            LerpMenuItems();
             
-            //Events aktivieren bei Pinch
+            //Events aktivieren bei Pinch - schönere Lösung finden!
             if (isIndexFingerPinching)
             {
                 indexEvent.Invoke();
             }
-            else if (isMiddleFingerPinching)
+            else
             {
-                middleEvent.Invoke();
+                defaultEvent.Invoke();
             }
-            else if (isRingFingerPinching)
+            
+            if (isRingFingerPinching)
             {
                 ringEvent.Invoke();
             }
-            else if (isPinkyFingerPinching)
+            else
+            {
+                defaultEvent.Invoke();
+            }
+            
+            if (isMiddleFingerPinching)
+            {
+                middleEvent.Invoke();
+            }
+            else
+            {
+                defaultEvent.Invoke();
+            }
+            
+            if (isPinkyFingerPinching)
             {
                 pinkyEvent.Invoke();
             }
@@ -61,23 +91,16 @@ public class HandMenu : MonoBehaviour
             {
                 defaultEvent.Invoke();
             }
-            
-            menuisOpened = true;
         }
-        else if (OVRInput.GetDown(OVRInput.Button.Start) && menuisOpened)
+        else
         {
+            //wenn menü geschlossen ist
             foreach (GameObject go in handmenuItems)
             {
                 go.SetActive(false);
             }
-            menuisOpened = false;
         }
-        
-        //Menüitems an die Positionen der Fingerspitzen platzieren
-        if (menuisOpened)
-        {
-            LerpMenuItems();
-        }
+
     }
 
     void LerpMenuItems()

@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class HandMenuMethods : MonoBehaviour
 {
+    public List<GameObject> testPrefabs;
+    private int prevIndex;
     void Start()
     {
         
     }
-
-    public void PrintEvent()
+    
+    public void DisplayTest(int index)
     {
-        Debug.Log("Finger Pressed");
-    }
-
-    public void NothingEvent()
-    {
-        Debug.Log("nothing is Happening");
+        testPrefabs[prevIndex].gameObject.SetActive(false);
+        testPrefabs[index].gameObject.SetActive(true);
+        prevIndex = index;
     }
 }
