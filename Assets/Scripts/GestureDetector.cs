@@ -28,7 +28,6 @@ public class GestureDetector : MonoBehaviour
         previousGesture = new Gesture();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (debugMode && Input.GetKeyDown(KeyCode.Space))

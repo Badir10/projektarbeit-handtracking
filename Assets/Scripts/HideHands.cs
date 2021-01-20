@@ -8,17 +8,10 @@ public class HideHands : MonoBehaviour
 
     [SerializeField] private GameObject lefthandAnchor;
     [SerializeField] private GameObject righthandAnchor;
-
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
+        //checkt, ob handtracking aktuell verwendet wird und aktiviert dann die Handtracking-Hände und deaktiviert die Controllertracking-Hände
         if (handscript.IsTracked)
         {
             lefthandAnchor.transform.GetChild(3).gameObject.transform.GetChild(0).gameObject.SetActive(true);
@@ -28,6 +21,8 @@ public class HideHands : MonoBehaviour
             righthandAnchor.transform.GetChild(4).gameObject.SetActive(false);
         }
 
+        //checkt, ob Controllertracking aktuell verwendet wird indem der Grabber geprüft wird (löst sehr leicht aus, wenn man den Controller greift, daher optimal
+        //aktiviert dann die Controllertracking-Hände und deaktiviert die Handtracking-Hände
         if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0)
         {
             lefthandAnchor.transform.GetChild(4).gameObject.SetActive(true);

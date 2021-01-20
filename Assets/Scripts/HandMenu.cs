@@ -106,10 +106,6 @@ public class HandMenu : MonoBehaviour
                     go.SetActive(false);
                 } 
             }
-            else
-            {
-                // was passiert, wenn die CustomHands verwendet werden.
-            }
         }
 
     }
