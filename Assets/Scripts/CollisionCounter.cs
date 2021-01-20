@@ -28,4 +28,12 @@ public class CollisionCounter : MonoBehaviour
             collisionCount++;
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Collision"))
+        {
+            collisionCount--;
+        }
+    }
 }

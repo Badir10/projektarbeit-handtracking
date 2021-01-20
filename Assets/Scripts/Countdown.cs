@@ -6,8 +6,12 @@ using UnityEngine.UI;
 public class Countdown : MonoBehaviour
 {
 
-    public static bool timerRunning = true;
-    public float remainingTime = 15;
+    public static bool timerRunning = false;
+    [SerializeField] private float remainingTime = 60;
+
+    public bool countdown = true;
+    [SerializeField] private float maxtime;
+    private float currentTime;
     
     private Text textDisplay;
 
@@ -36,8 +40,16 @@ public class Countdown : MonoBehaviour
 
     void Update()
     {
-        Timer();
-        DisplayTime(remainingTime);
+        if (countdown)
+        {
+            Timer();
+            DisplayTime(remainingTime);
+        }
+        else
+        {
+            StopWatch();
+            DisplayTime(currentTime);
+        }
         
     }
 
@@ -64,4 +76,22 @@ public class Countdown : MonoBehaviour
 
         textDisplay.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
+
+    public void StopWatch()
+    {
+        if (timerRunning)
+        {
+            if (currentTime <= maxtime)
+            {
+                currentTime += Time.deltaTime;
+            }
+            else
+            {
+                currentTime = maxtime;
+                timerRunning = false;
+            }
+        }
+    }
+    
+    
 }

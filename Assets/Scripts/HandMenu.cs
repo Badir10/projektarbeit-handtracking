@@ -24,7 +24,7 @@ public class HandMenu : MonoBehaviour
     void Start()
     {
         hand = gameObject.GetComponent<OVRHand>();
-        skeleton = gameObject.GetComponent<OVRSkeleton>();
+        skeleton = gameObject.GetComponent<OVRCustomSkeleton>();
     }
 
     // Update is called once per frame
@@ -53,7 +53,10 @@ public class HandMenu : MonoBehaviour
         //Events werden durchgegeben
         if (menuisOpened)
         {
-            LerpMenuItems();
+            if (gameObject.name == "OVRHandPrefab")
+            {
+                LerpMenuItems();
+            }
             
             //Events aktivieren bei Pinch - schönere Lösung finden!
             if (isIndexFingerPinching)
@@ -94,10 +97,18 @@ public class HandMenu : MonoBehaviour
         }
         else
         {
-            //wenn menü geschlossen ist
-            foreach (GameObject go in handmenuItems)
+            //Dies soll auch nur passieren, wenn das normale OVRHandPrefab verwendet wird
+            if (gameObject.name == "OVRHandPrefab")
             {
-                go.SetActive(false);
+                //wenn menü geschlossen ist
+                foreach (GameObject go in handmenuItems)
+                {
+                    go.SetActive(false);
+                } 
+            }
+            else
+            {
+                // was passiert, wenn die CustomHands verwendet werden.
             }
         }
 

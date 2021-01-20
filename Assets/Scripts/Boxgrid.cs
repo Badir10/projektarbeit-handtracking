@@ -13,6 +13,8 @@ public class Boxgrid : MonoBehaviour
     
     public GameObject box;
 
+    public static bool boxcreated = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,8 @@ public class Boxgrid : MonoBehaviour
                 }
             }
         }
+
+        boxcreated = true;
     }
 
     private void Update()
@@ -43,6 +47,13 @@ public class Boxgrid : MonoBehaviour
             foreach (GameObject go in blocks)
             {
                 go.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            }
+        }
+        else
+        {
+            foreach (GameObject go in blocks)
+            {
+                go.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             }
         }
     }

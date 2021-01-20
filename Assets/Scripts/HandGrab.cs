@@ -25,10 +25,13 @@ public class HandGrab : OVRGrabber
         // Fuehrt die Start-Methode des OVRGrabber aus und nimmt sich zusaetzlich das Handtracking-Prefab
         base.Start();
         hand = gameObject.GetComponent<OVRHand>();
-        //
         
-        // Sucht die Position der Daumenspitze und platziert an dieser Stelle einen Collider, der als GrabVolume dient
-        skeleton = gameObject.GetComponent<OVRSkeleton>();
+        //verwendet OVRSkeleton nur bei der normalen OVRHand, da die Custom Hand es nicht benötigt
+        if (gameObject.name == "OVRHandPrefab")
+        {
+            skeleton = gameObject.GetComponent<OVRSkeleton>();
+        }
+        
     }
 
     public override void Update()
@@ -41,10 +44,14 @@ public class HandGrab : OVRGrabber
         // Vorher Grabber zu groß und Dinge wurden an falsche Position platziert beim grabben.
         
         // Geht alle "Knochen"-Punkte und Positionen durch und nimmt sich die Position der Zeigefingerspitze
-        foreach(OVRBone bone in skeleton.Bones) {
-            if (bone.Id == OVRSkeleton.BoneId.Hand_IndexTip) {
-                indexTipPos = bone.Transform.position;
-                grabSphere.transform.position = indexTipPos;
+
+        if (gameObject.name == "OVRHandPrefab")
+        {
+            foreach(OVRBone bone in skeleton.Bones) {
+                if (bone.Id == OVRSkeleton.BoneId.Hand_IndexTip) {
+                    indexTipPos = bone.Transform.position;
+                    grabSphere.transform.position = indexTipPos;
+                }
             }
         }
     }
