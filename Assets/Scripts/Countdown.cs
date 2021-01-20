@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class Countdown : MonoBehaviour
 {
 
-    public static bool timerRunning = true;
+    public static bool timerRunning = false;
     [SerializeField] private float remainingTime = 60;
 
-    public bool countdown;
+    public bool countdown = true;
     [SerializeField] private float maxtime;
+    private float currentTime;
     
     private Text textDisplay;
 
@@ -44,6 +45,11 @@ public class Countdown : MonoBehaviour
             Timer();
             DisplayTime(remainingTime);
         }
+        else
+        {
+            StopWatch();
+            DisplayTime(currentTime);
+        }
         
     }
 
@@ -75,15 +81,17 @@ public class Countdown : MonoBehaviour
     {
         if (timerRunning)
         {
-            if (remainingTime > maxtime)
+            if (currentTime <= maxtime)
             {
-                remainingTime += Time.deltaTime;
+                currentTime += Time.deltaTime;
             }
             else
             {
-                remainingTime = maxtime;
+                currentTime = maxtime;
                 timerRunning = false;
             }
         }
     }
+    
+    
 }
