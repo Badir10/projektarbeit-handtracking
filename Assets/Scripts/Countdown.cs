@@ -7,7 +7,10 @@ public class Countdown : MonoBehaviour
 {
 
     public static bool timerRunning = true;
-    public float remainingTime = 15;
+    [SerializeField] private float remainingTime = 60;
+
+    public bool countdown;
+    [SerializeField] private float maxtime;
     
     private Text textDisplay;
 
@@ -36,8 +39,11 @@ public class Countdown : MonoBehaviour
 
     void Update()
     {
-        Timer();
-        DisplayTime(remainingTime);
+        if (countdown)
+        {
+            Timer();
+            DisplayTime(remainingTime);
+        }
         
     }
 
@@ -63,5 +69,21 @@ public class Countdown : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         textDisplay.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    public void StopWatch()
+    {
+        if (timerRunning)
+        {
+            if (remainingTime > maxtime)
+            {
+                remainingTime += Time.deltaTime;
+            }
+            else
+            {
+                remainingTime = maxtime;
+                timerRunning = false;
+            }
+        }
     }
 }

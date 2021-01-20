@@ -236,7 +236,7 @@ public class PositionController : MonoBehaviour
     private void DeleteInstance(){
         // Wenn der Button Start vom linken Controller gedrückt wurde, werden alle Instanzierten Prefabs (Points, tablePlaneInstance) zerstört
         // Dies dient dazu um die gesetzten Points zu reseten, falls der instanzierte Point nicht korrekt platziert wurde
-        if (OVRInput.GetDown(OVRInput.Button.Start))
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstick))
         {
             foreach(GameObject points in pointList){
                 GameObject.Destroy(points);
