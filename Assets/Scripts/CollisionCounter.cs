@@ -7,18 +7,18 @@ using UnityEngine.UI;
 public class CollisionCounter : MonoBehaviour
 {
     public int collisionCount = 0;
-    private Text countDisplay;
+    public Text countDisplay;
     
     // Start is called before the first frame update
     void Start()
     {
-        countDisplay = GameObject.Find("BoxCount").GetComponent<Text>();
+        //countDisplay = GameObject.Find("BoxCount").GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        countDisplay.text = collisionCount + " Boxen";
+        countDisplay.text = collisionCount + "";
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,6 +33,7 @@ public class CollisionCounter : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Collision"))
         {
+            //Wieder hinzufügen!
             collisionCount--;
         }
     }
