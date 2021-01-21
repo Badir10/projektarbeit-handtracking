@@ -630,8 +630,6 @@ Transform:
   - {fileID: 1798958454093000063}
   - {fileID: 1798958454313967024}
   - {fileID: 1798958454786662177}
-  - {fileID: 1798958454085061533}
-  - {fileID: 1798958454983855332}
   - {fileID: 1798958453708674990}
   m_Father: {fileID: 1798958453980052132}
   m_RootOrder: 1
@@ -680,6 +678,7 @@ GameObject:
   - component: {fileID: 1798958453708674979}
   - component: {fileID: 1798958453708674988}
   - component: {fileID: 1798958453708674989}
+  - component: {fileID: 140087004219733519}
   m_Layer: 0
   m_Name: Geste10
   m_TagString: Untagged
@@ -704,7 +703,7 @@ Transform:
   - {fileID: 1798958453841876034}
   - {fileID: 1798958452941637808}
   m_Father: {fileID: 1798958453398505897}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1798958453708674979
 MeshFilter:
@@ -768,6 +767,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &140087004219733519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798958453708674991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f72695db5cafb74b956124d10d9bbb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: {fileID: 1798958453209006062}
+  middle: {fileID: 1798958452948988762}
+  ring: {fileID: 1798958453841876035}
+  pinky: {fileID: 1798958452941637820}
+  hand: {fileID: 0}
 --- !u!1 &1798958453841876035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,101 +1066,6 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798958454073265768}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1798958454085061534
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1798958454085061533}
-  - component: {fileID: 1798958454085061522}
-  - component: {fileID: 1798958454085061523}
-  - component: {fileID: 1798958454085061532}
-  m_Layer: 0
-  m_Name: Geste8
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1798958454085061533
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798958454085061534}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.1200004, y: -1.9200001, z: 5.557}
-  m_LocalScale: {x: 2, y: 2, z: 0.5}
-  m_Children: []
-  m_Father: {fileID: 1798958453398505897}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1798958454085061522
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798958454085061534}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1798958454085061523
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798958454085061534}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 3b72aa8c7eae5be4eb8f7c07e570e57d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1798958454085061532
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798958454085061534}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -1742,6 +1663,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1798958453980052132}
+  - component: {fileID: 966132347631539699}
+  - component: {fileID: 1142877268351709365}
+  - component: {fileID: 8169009126183022237}
   m_Layer: 0
   m_Name: GestenBilder_Tutorial
   m_TagString: Untagged
@@ -1765,6 +1689,615 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &966132347631539699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798958454358265119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f5e93623245294da884855e52f33fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs: []
+  cube: {fileID: 0}
+  colors: []
+  gestureSprites:
+  - {fileID: 1798958453429535180}
+  - {fileID: 1798958454886344192}
+  - {fileID: 1798958453829588064}
+  - {fileID: 1798958454495602964}
+  - {fileID: 1798958453153471412}
+  - {fileID: 1798958453124944356}
+  - {fileID: 1798958454285019536}
+--- !u!114 &1142877268351709365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798958454358265119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ea6df46e25b3f42bdcba3a2a0bdc95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshold: 0.05
+  skeleton: {fileID: 0}
+  gestures:
+  - name: Thumbs-Up
+    fingerData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: -0.020069303, y: -0.011554115, z: -0.010496564}
+    - {x: -0.033379946, y: -0.0138264885, z: -0.03136068}
+    - {x: -0.056573708, y: -0.018217845, z: -0.05371816}
+    - {x: -0.08565523, y: -0.022573117, z: -0.070369594}
+    - {x: -0.09599625, y: -0.007316439, z: -0.023550715}
+    - {x: -0.11014761, y: -0.042461555, z: -0.021806601}
+    - {x: -0.08591123, y: -0.043999966, z: -0.02085863}
+    - {x: -0.095646605, y: -0.002543157, z: -0.0017258968}
+    - {x: -0.10804799, y: -0.043632817, z: -0.0009685408}
+    - {x: -0.08072279, y: -0.045084607, z: -0.0041629304}
+    - {x: -0.0886938, y: -0.006529307, z: 0.01746525}
+    - {x: -0.09706712, y: -0.044569537, z: 0.015588043}
+    - {x: -0.07155449, y: -0.042887896, z: 0.008347645}
+    - {x: -0.034073558, y: -0.0094198445, z: 0.022998536}
+    - {x: -0.077895835, y: -0.013691185, z: 0.03505412}
+    - {x: -0.0868847, y: -0.042341754, z: 0.028566368}
+    - {x: -0.06781402, y: -0.040933292, z: 0.021719646}
+    - {x: -0.10060381, y: -0.023893835, z: -0.08988893}
+    - {x: -0.07488475, y: -0.024527159, z: -0.021555532}
+    - {x: -0.06679637, y: -0.024762433, z: -0.008370131}
+    - {x: -0.0608464, y: -0.021200785, z: 0.0052786795}
+    - {x: -0.056889895, y: -0.022083046, z: 0.018987786}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 966132347631539699}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 4
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 966132347631539699}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureNotRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 4
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: Peace
+    fingerData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: -0.020069335, y: -0.011554129, z: -0.0104965735}
+    - {x: -0.037786204, y: -0.02335111, z: -0.023325913}
+    - {x: -0.06261672, y: -0.04207442, z: -0.03281113}
+    - {x: -0.08787301, y: -0.054755814, z: -0.014283396}
+    - {x: -0.0959963, y: -0.007316439, z: -0.023550732}
+    - {x: -0.13217603, y: -0.016595753, z: -0.03013839}
+    - {x: -0.15386926, y: -0.026951626, z: -0.033720184}
+    - {x: -0.09564662, y: -0.0025431623, z: -0.0017259183}
+    - {x: -0.13263865, y: -0.023208596, z: 0.0051484653}
+    - {x: -0.15624209, y: -0.03664255, z: 0.009772962}
+    - {x: -0.088693805, y: -0.006529298, z: 0.017465247}
+    - {x: -0.102058664, y: -0.04315797, z: 0.018111605}
+    - {x: -0.078702636, y: -0.05107025, z: 0.00821018}
+    - {x: -0.034073528, y: -0.00941985, z: 0.022998614}
+    - {x: -0.07789585, y: -0.0136911655, z: 0.035054084}
+    - {x: -0.0842177, y: -0.04331183, z: 0.029916313}
+    - {x: -0.070225, y: -0.052697763, z: 0.01857341}
+    - {x: -0.09746896, y: -0.058474436, z: 0.008083924}
+    - {x: -0.17499049, y: -0.034117606, z: -0.035669338}
+    - {x: -0.17892501, y: -0.045782324, z: 0.014929}
+    - {x: -0.062047947, y: -0.034578547, z: 0.0014977218}
+    - {x: -0.053426333, y: -0.05114227, z: 0.0045194034}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 966132347631539699}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 6
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 966132347631539699}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureNotRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 6
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: Three-Fingers
+    fingerData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: -0.020069288, y: -0.011554104, z: -0.010496509}
+    - {x: -0.03144706, y: -0.010063227, z: -0.03254136}
+    - {x: -0.05204576, y: -0.011272286, z: -0.057667505}
+    - {x: -0.07977646, y: -0.014239155, z: -0.07675106}
+    - {x: -0.09599623, y: -0.007316489, z: -0.023550697}
+    - {x: -0.13274086, y: -0.016229467, z: -0.026528971}
+    - {x: -0.15483025, y: -0.026267888, z: -0.027927954}
+    - {x: -0.09564663, y: -0.0025431837, z: -0.0017259397}
+    - {x: -0.13100344, y: -0.026488436, z: 0.0026613292}
+    - {x: -0.15372272, y: -0.041766487, z: 0.005726107}
+    - {x: -0.08869379, y: -0.0065293177, z: 0.017465234}
+    - {x: -0.09759694, y: -0.044448145, z: 0.015570223}
+    - {x: -0.07202664, y: -0.045513038, z: 0.008416845}
+    - {x: -0.03407355, y: -0.009419864, z: 0.022998566}
+    - {x: -0.077895835, y: -0.013691181, z: 0.03505408}
+    - {x: -0.07838814, y: -0.04324937, z: 0.026698349}
+    - {x: -0.06015322, y: -0.04294949, z: 0.017756864}
+    - {x: -0.09418841, y: -0.014166946, z: -0.09671348}
+    - {x: -0.17555125, y: -0.034745604, z: -0.027763093}
+    - {x: -0.17496832, y: -0.054492988, z: 0.009087579}
+    - {x: -0.05382345, y: -0.03017531, z: 0.0031431112}
+    - {x: -0.041813064, y: -0.044567104, z: 0.005792227}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 966132347631539699}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 966132347631539699}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureNotRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: One-Finger
+    fingerData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: -0.020069327, y: -0.011554108, z: -0.010496542}
+    - {x: -0.036292374, y: -0.019886643, z: -0.027379451}
+    - {x: -0.060788248, y: -0.034090117, z: -0.043357484}
+    - {x: -0.085402906, y: -0.04780407, z: -0.024702152}
+    - {x: -0.09599621, y: -0.007316475, z: -0.023550669}
+    - {x: -0.12964758, y: -0.024793886, z: -0.024329841}
+    - {x: -0.1493916, y: -0.038965728, z: -0.024347497}
+    - {x: -0.09564662, y: -0.0025431872, z: -0.0017259183}
+    - {x: -0.10670913, y: -0.04396833, z: 0.00034883773}
+    - {x: -0.08061077, y: -0.050462075, z: -0.0056248447}
+    - {x: -0.08869377, y: -0.006529298, z: 0.017465277}
+    - {x: -0.091866545, y: -0.04530634, z: 0.014824666}
+    - {x: -0.0667926, y: -0.046232697, z: 0.0060734022}
+    - {x: -0.034073576, y: -0.0094198445, z: 0.02299856}
+    - {x: -0.07789583, y: -0.01369121, z: 0.03505408}
+    - {x: -0.07826342, y: -0.043235295, z: 0.026642501}
+    - {x: -0.060265265, y: -0.045901537, z: 0.017614214}
+    - {x: -0.09802331, y: -0.056853615, z: -0.0055961017}
+    - {x: -0.16909601, y: -0.04949993, z: -0.022924723}
+    - {x: -0.060126133, y: -0.03777296, z: -0.012258317}
+    - {x: -0.04718891, y: -0.033776134, z: -0.0013388523}
+    - {x: -0.042111978, y: -0.038897723, z: 0.0074389707}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 966132347631539699}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 966132347631539699}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureNotRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: Four-Fingers
+    fingerData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: -0.020069327, y: -0.011554095, z: -0.010496539}
+    - {x: -0.038373467, y: -0.024890311, z: -0.02073136}
+    - {x: -0.068501435, y: -0.033926565, z: -0.02896214}
+    - {x: -0.09050424, y: -0.037387274, z: -0.003548099}
+    - {x: -0.09599625, y: -0.007316446, z: -0.0235507}
+    - {x: -0.13355798, y: -0.0033328328, z: -0.02697555}
+    - {x: -0.15312804, y: -0.017661758, z: -0.028511686}
+    - {x: -0.09564662, y: -0.002543155, z: -0.0017259183}
+    - {x: -0.13782163, y: 0.0016828704, z: 0.005066481}
+    - {x: -0.1640722, y: -0.005595533, z: 0.009178716}
+    - {x: -0.08869378, y: -0.0065293247, z: 0.01746525}
+    - {x: -0.12459361, y: -0.008221309, z: 0.0325992}
+    - {x: -0.14899947, y: -0.010087898, z: 0.042944036}
+    - {x: -0.034073554, y: -0.009419863, z: 0.022998579}
+    - {x: -0.07789586, y: -0.013691189, z: 0.035054073}
+    - {x: -0.10443331, y: -0.01747702, z: 0.05005988}
+    - {x: -0.121028, y: -0.01985387, z: 0.06152809}
+    - {x: -0.08942519, y: -0.03585005, z: 0.021001514}
+    - {x: -0.17337951, y: -0.027208298, z: -0.02850192}
+    - {x: -0.18833971, y: -0.009562385, z: 0.013649892}
+    - {x: -0.17175645, y: -0.009647337, z: 0.05168123}
+    - {x: -0.14014292, y: -0.020557148, z: 0.07231024}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 966132347631539699}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 966132347631539699}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureNotRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: Fist
+    fingerData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: -0.020069271, y: -0.011554118, z: -0.010496502}
+    - {x: -0.03684251, y: -0.021116776, z: -0.026144745}
+    - {x: -0.060586467, y: -0.038567595, z: -0.039884422}
+    - {x: -0.08830863, y: -0.054282796, z: -0.028637761}
+    - {x: -0.095996216, y: -0.007316489, z: -0.023550669}
+    - {x: -0.1128054, y: -0.04113419, z: -0.020044064}
+    - {x: -0.088830695, y: -0.044774678, z: -0.02166573}
+    - {x: -0.09564659, y: -0.0025431337, z: -0.0017258825}
+    - {x: -0.10544857, y: -0.044288717, z: 0.00026385754}
+    - {x: -0.07888643, y: -0.04771055, z: -0.00619567}
+    - {x: -0.08869382, y: -0.0065293214, z: 0.01746523}
+    - {x: -0.092316665, y: -0.045284696, z: 0.015100416}
+    - {x: -0.067469314, y: -0.044171818, z: 0.005745389}
+    - {x: -0.034073535, y: -0.009419839, z: 0.02299859}
+    - {x: -0.07789586, y: -0.013691174, z: 0.035054073}
+    - {x: -0.079308555, y: -0.043258972, z: 0.026838535}
+    - {x: -0.060668193, y: -0.044780303, z: 0.01891548}
+    - {x: -0.0983671, y: -0.059526633, z: -0.0067850896}
+    - {x: -0.07861346, y: -0.024958855, z: -0.023714958}
+    - {x: -0.06798211, y: -0.026044793, z: -0.012222837}
+    - {x: -0.05753062, y: -0.022286642, z: 0.0016618863}
+    - {x: -0.046578027, y: -0.028843066, z: 0.013474841}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 966132347631539699}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 966132347631539699}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureNotRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: O-Circle
+    fingerData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: -0.020069294, y: -0.011554077, z: -0.010496497}
+    - {x: -0.03716899, y: -0.021868438, z: -0.025290562}
+    - {x: -0.060234677, y: -0.041341398, z: -0.03736805}
+    - {x: -0.08826413, y: -0.058499705, z: -0.029499369}
+    - {x: -0.09599622, y: -0.0073164604, z: -0.023550669}
+    - {x: -0.12687841, y: -0.029241392, z: -0.021534106}
+    - {x: -0.123447, y: -0.053284865, z: -0.020638203}
+    - {x: -0.095646635, y: -0.0025431586, z: -0.0017259326}
+    - {x: -0.114459455, y: -0.04089524, z: 0.002507394}
+    - {x: -0.08858072, y: -0.04752138, z: -0.0042278096}
+    - {x: -0.088693805, y: -0.006529298, z: 0.017465247}
+    - {x: -0.09914565, y: -0.044095393, z: 0.016971083}
+    - {x: -0.074237525, y: -0.043070897, z: 0.007768906}
+    - {x: -0.03407358, y: -0.009419821, z: 0.02299857}
+    - {x: -0.07789585, y: -0.013691168, z: 0.035054076}
+    - {x: -0.08661557, y: -0.042617053, z: 0.02948574}
+    - {x: -0.06835058, y: -0.04234165, z: 0.02060498}
+    - {x: -0.107451744, y: -0.07321749, z: -0.024869895}
+    - {x: -0.11403827, y: -0.07353348, z: -0.01898641}
+    - {x: -0.06908615, y: -0.033619277, z: -0.011392251}
+    - {x: -0.054823946, y: -0.030472375, z: 0.00010051529}
+    - {x: -0.052908625, y: -0.028699093, z: 0.013018345}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls: []
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Half-O-Circle
+    fingerData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: -0.020069284, y: -0.011554099, z: -0.010496502}
+    - {x: -0.03615596, y: -0.019587452, z: -0.0276527}
+    - {x: -0.061078634, y: -0.03242584, z: -0.04411869}
+    - {x: -0.09104945, y: -0.046577346, z: -0.03752653}
+    - {x: -0.09599625, y: -0.007316446, z: -0.02355069}
+    - {x: -0.12143448, y: -0.03515001, z: -0.019467795}
+    - {x: -0.11818642, y: -0.05920935, z: -0.01834203}
+    - {x: -0.095646635, y: -0.0025431802, z: -0.0017259611}
+    - {x: -0.10651671, y: -0.04402598, z: 0.00020884641}
+    - {x: -0.07984351, y: -0.047604647, z: -0.0056830235}
+    - {x: -0.08869379, y: -0.0065293, z: 0.017465247}
+    - {x: -0.09315712, y: -0.04519992, z: 0.015150196}
+    - {x: -0.068050034, y: -0.04495549, z: 0.0064483597}
+    - {x: -0.034073573, y: -0.00941983, z: 0.022998573}
+    - {x: -0.077895895, y: -0.013691185, z: 0.03505403}
+    - {x: -0.08146583, y: -0.0432864, z: 0.02762962}
+    - {x: -0.06318894, y: -0.044644736, z: 0.018873867}
+    - {x: -0.10866013, y: -0.05710058, z: -0.023912743}
+    - {x: -0.110397115, y: -0.080129355, z: -0.016627738}
+    - {x: -0.059517715, y: -0.034423843, z: -0.011828204}
+    - {x: -0.049091525, y: -0.03137547, z: -0.0006630262}
+    - {x: -0.04669023, y: -0.03269733, z: 0.01067741}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls: []
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls: []
+  debugMode: 1
+  hand: {fileID: 0}
+--- !u!114 &8169009126183022237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798958454358265119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ea6df46e25b3f42bdcba3a2a0bdc95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshold: 0.05
+  skeleton: {fileID: 0}
+  gestures:
+  - name: O-Geste-Richtig
+    fingerData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: -0.020069329, y: -0.011554107, z: -0.010496514}
+    - {x: -0.03694734, y: -0.021356087, z: -0.025881728}
+    - {x: -0.058726314, y: -0.041891515, z: -0.038572792}
+    - {x: -0.08551203, y: -0.059895102, z: -0.028554456}
+    - {x: -0.09599623, y: -0.0073164543, z: -0.023550678}
+    - {x: -0.122976094, y: -0.03374095, z: -0.020041797}
+    - {x: -0.11843808, y: -0.057598535, z: -0.019098993}
+    - {x: -0.095646575, y: -0.002543161, z: -0.0017258677}
+    - {x: -0.13581012, y: -0.016017137, z: 0.005207517}
+    - {x: -0.1599989, y: -0.028488198, z: 0.009492039}
+    - {x: -0.08869379, y: -0.006529327, z: 0.017465249}
+    - {x: -0.12686583, y: -0.009887271, z: 0.024698405}
+    - {x: -0.15266863, y: -0.014143666, z: 0.029414576}
+    - {x: -0.034073565, y: -0.009419817, z: 0.022998596}
+    - {x: -0.07789587, y: -0.013691163, z: 0.03505408}
+    - {x: -0.106799185, y: -0.012565066, z: 0.045401692}
+    - {x: -0.12548696, y: -0.015423572, z: 0.052827846}
+    - {x: -0.103823826, y: -0.075702414, z: -0.02397012}
+    - {x: -0.1100641, y: -0.078290924, z: -0.017378325}
+    - {x: -0.1822134, y: -0.03907082, z: 0.013869416}
+    - {x: -0.17645788, y: -0.018519279, z: 0.032470353}
+    - {x: -0.14650962, y: -0.017224155, z: 0.05890534}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 966132347631539699}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 5
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 966132347631539699}
+          m_TargetAssemblyTypeName: GestureEvents, Assembly-CSharp
+          m_MethodName: GestureNotRecognized
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 5
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: Mittelfinger-Touch
+    fingerData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: -0.020069322, y: -0.011554091, z: -0.010496524}
+    - {x: -0.037400674, y: -0.022414062, z: -0.02461505}
+    - {x: -0.060253453, y: -0.04283411, z: -0.035471708}
+    - {x: -0.08726027, y: -0.059693303, z: -0.024141595}
+    - {x: -0.09599621, y: -0.0073164543, z: -0.023550667}
+    - {x: -0.13349393, y: -0.01236828, z: -0.026174301}
+    - {x: -0.15493326, y: -0.023760773, z: -0.02728593}
+    - {x: -0.095646665, y: -0.0025431502, z: -0.0017259325}
+    - {x: -0.12852556, y: -0.02894312, z: 0.006320289}
+    - {x: -0.11689664, y: -0.05365825, z: 0.0027276794}
+    - {x: -0.08869382, y: -0.006529298, z: 0.017465241}
+    - {x: -0.121497676, y: -0.0247318, z: 0.028108014}
+    - {x: -0.14102206, y: -0.0418947, z: 0.033619877}
+    - {x: -0.03407359, y: -0.0094198305, z: 0.022998553}
+    - {x: -0.0778958, y: -0.013691195, z: 0.03505409}
+    - {x: -0.103846386, y: -0.019414129, z: 0.05046708}
+    - {x: -0.11993741, y: -0.025179045, z: 0.06143965}
+    - {x: -0.100092605, y: -0.06659087, z: -0.0042930627}
+    - {x: -0.17633457, y: -0.030322272, z: -0.026851254}
+    - {x: -0.095947616, y: -0.06510415, z: -0.004672738}
+    - {x: -0.15805243, y: -0.059051882, z: 0.036783658}
+    - {x: -0.13862017, y: -0.031361587, z: 0.07117935}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls: []
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Ringfinger-Touch
+    fingerData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: -0.02006928, y: -0.0115540875, z: -0.0104965065}
+    - {x: -0.038262792, y: -0.024585143, z: -0.021305695}
+    - {x: -0.061220024, y: -0.04692496, z: -0.02687239}
+    - {x: -0.08652078, y: -0.06215411, z: -0.010443218}
+    - {x: -0.09599627, y: -0.0073164543, z: -0.023550678}
+    - {x: -0.13319857, y: -0.00029935534, z: -0.025836855}
+    - {x: -0.15627742, y: -0.00783463, z: -0.026957415}
+    - {x: -0.095646605, y: -0.0025431537, z: -0.0017259036}
+    - {x: -0.13703069, y: -0.00628114, z: 0.00904981}
+    - {x: -0.15938479, y: -0.02135927, z: 0.014699786}
+    - {x: -0.08869378, y: -0.006529291, z: 0.017465277}
+    - {x: -0.119501755, y: -0.029115183, z: 0.025304085}
+    - {x: -0.11223905, y: -0.053771038, z: 0.018559499}
+    - {x: -0.034073513, y: -0.009419852, z: 0.022998586}
+    - {x: -0.07789583, y: -0.013691192, z: 0.03505409}
+    - {x: -0.10477286, y: -0.02372108, z: 0.04604367}
+    - {x: -0.12140178, y: -0.03211441, z: 0.054142002}
+    - {x: -0.10049567, y: -0.069943674, z: 0.008271364}
+    - {x: -0.17841431, y: -0.0111447, z: -0.026446052}
+    - {x: -0.17834806, y: -0.036901128, z: 0.019545458}
+    - {x: -0.094261386, y: -0.066328794, z: 0.007905027}
+    - {x: -0.14042729, y: -0.04088684, z: 0.06071516}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls: []
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Pinky-Touch
+    fingerData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: -0.020069266, y: -0.011554113, z: -0.010496488}
+    - {x: -0.03827194, y: -0.024609994, z: -0.021260278}
+    - {x: -0.061072215, y: -0.0471439, z: -0.026687961}
+    - {x: -0.084645204, y: -0.060665533, z: -0.006601832}
+    - {x: -0.09599628, y: -0.0073164687, z: -0.023550713}
+    - {x: -0.13387272, y: -0.0073522087, z: -0.021588225}
+    - {x: -0.15667516, y: -0.015609374, z: -0.019995613}
+    - {x: -0.095646635, y: -0.002543161, z: -0.001725918}
+    - {x: -0.13708267, y: 0.00147804, z: 0.008743693}
+    - {x: -0.16286401, y: -0.005787567, z: 0.015186709}
+    - {x: -0.0886938, y: -0.0065293163, z: 0.017465249}
+    - {x: -0.1245695, y: -0.017846948, z: 0.027738681}
+    - {x: -0.14712267, y: -0.03070052, z: 0.033420507}
+    - {x: -0.034073576, y: -0.009419852, z: 0.022998556}
+    - {x: -0.077895805, y: -0.013691188, z: 0.035054088}
+    - {x: -0.10268477, y: -0.031827167, z: 0.034472357}
+    - {x: -0.098863535, y: -0.050466787, z: 0.027364891}
+    - {x: -0.09438851, y: -0.063818865, z: 0.015788639}
+    - {x: -0.17857678, y: -0.019092197, z: -0.016921733}
+    - {x: -0.18683729, y: -0.0071085314, z: 0.022127207}
+    - {x: -0.16630045, y: -0.045471903, z: 0.036324676}
+    - {x: -0.08652038, y: -0.06470707, z: 0.016095802}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls: []
+    notRecognized:
+      m_PersistentCalls:
+        m_Calls: []
+  debugMode: 1
+  hand: {fileID: 0}
 --- !u!1 &1798958454518818431
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,101 +2722,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1798958454983855333
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1798958454983855332}
-  - component: {fileID: 1798958454983855129}
-  - component: {fileID: 1798958454983855130}
-  - component: {fileID: 1798958454983855131}
-  m_Layer: 0
-  m_Name: Geste9
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1798958454983855332
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798958454983855333}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.32, y: -1.9200001, z: 5.557}
-  m_LocalScale: {x: 2, y: 2, z: 0.5}
-  m_Children: []
-  m_Father: {fileID: 1798958453398505897}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1798958454983855129
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798958454983855333}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1798958454983855130
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798958454983855333}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 3b72aa8c7eae5be4eb8f7c07e570e57d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1798958454983855131
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798958454983855333}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1798958454990090138
 GameObject:
   m_ObjectHideFlags: 0

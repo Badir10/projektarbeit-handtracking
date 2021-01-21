@@ -11,9 +11,15 @@ public class IsPinchingTest : MonoBehaviour
     [SerializeField] private GameObject ring;
     [SerializeField] private GameObject pinky;
 
+    [SerializeField] private OVRHand hand;
+
+    private void Start()
+    {
+        hand = GameObject.Find("OVRCustomHandPrefab_L").GetComponent<OVRHand>();
+    }
+
     void Update()
     {
-        var hand = GetComponent<OVRHand>();
         bool isRingFingerPinching = hand.GetFingerIsPinching(OVRHand.HandFinger.Ring);
         bool isIndexFingerPinching = hand.GetFingerIsPinching(OVRHand.HandFinger.Index);
         bool isPinkyFingerPinching = hand.GetFingerIsPinching(OVRHand.HandFinger.Pinky);

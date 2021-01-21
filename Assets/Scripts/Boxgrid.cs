@@ -42,19 +42,5 @@ public class Boxgrid : MonoBehaviour
 
     private void Update()
     {
-        if (!Countdown.timerRunning)
-        {
-            foreach (GameObject go in blocks)
-            {
-                go.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            }
-        }
-        else
-        {
-            foreach (GameObject go in blocks)
-            {
-                go.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-            }
-        }
     }
 }

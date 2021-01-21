@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class StopTest : MonoBehaviour
 {
-    private GameObject test;
-    // Start is called before the first frame update
+    private Rigidbody objectRB;
+
     void Start()
     {
-        test = gameObject;
+        objectRB = gameObject.GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        objectRB.constraints = RigidbodyConstraints.FreezeAll;
         
+        if (Countdown.timerRunning) objectRB.constraints = RigidbodyConstraints.None;
     }
 }

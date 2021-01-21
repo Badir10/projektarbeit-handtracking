@@ -53,7 +53,7 @@ public class Countdown : MonoBehaviour
         
     }
 
-    public void Timer() // in Klammern später Variable für die Zeit eingeben, wenn es mit Button verbunden werden soll
+    public void Timer()
     {
         if (timerRunning)
         {

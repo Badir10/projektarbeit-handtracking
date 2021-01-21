@@ -12,6 +12,15 @@ public class GestureEvents : MonoBehaviour
     public List<Color> colors;
     public List<SpriteRenderer> gestureSprites;
 
+
+    private void Start()
+    {
+        if (GameObject.Find("GestenBilder_Tutorial(Clone)") != null && gestureSprites.Count == 0)
+        {
+            gestureSprites = GameObject.Find("GestenBilder_Tutorial(Clone)").GetComponent<GestureEvents>().gestureSprites;
+        }
+    }
+
     public void Spawn(int index)
     {
         Instantiate(prefabs[index], transform.position, transform.rotation);
@@ -35,12 +44,17 @@ public class GestureEvents : MonoBehaviour
     
     public void GestureRecognized(int index)
     {
-        //Invoke("ChangeColorBack", 1);
-        gestureSprites[index].color = Color.white;
+        if (gestureSprites.Count > 0)
+        {
+            gestureSprites[index].color = Color.white;
+        }
     }
 
     public void GestureNotRecognized(int index)
     {
-        gestureSprites[index].color = Color.black;
+        if (gestureSprites.Count > 0)
+        {
+            gestureSprites[index].color = Color.black;
+        }
     }
 }

@@ -22,8 +22,12 @@ public class GestureDetector : MonoBehaviour
     private List<OVRBone> fingerBones;
     private Gesture previousGesture;
 
+    public OVRHand hand;
+
     void Start()
     {
+        hand = GameObject.Find("OVRCustomHandPrefab_R").GetComponent<OVRHand>();
+        skeleton = hand.GetComponent<OVRCustomSkeleton>();
         fingerBones = new List<OVRBone>(skeleton.Bones);
         previousGesture = new Gesture();
     }

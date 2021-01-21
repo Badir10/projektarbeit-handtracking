@@ -9,11 +9,6 @@ public class CollisionCounter : MonoBehaviour
     public int collisionCount = 0;
     public Text countDisplay;
     
-    void Start()
-    {
-        //countDisplay = GameObject.Find("BoxCount").GetComponent<Text>();
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -24,7 +19,10 @@ public class CollisionCounter : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Collision"))
         {
-            collisionCount++;
+            if (Countdown.timerRunning)
+            {
+                collisionCount++;
+            }
         }
     }
 
@@ -32,8 +30,10 @@ public class CollisionCounter : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Collision"))
         {
-            //Wieder hinzufügen!
-            //collisionCount--;
+            if (Countdown.timerRunning && gameObject.name != "Pipe")
+            {
+                collisionCount--;
+            }
         }
     }
 }
