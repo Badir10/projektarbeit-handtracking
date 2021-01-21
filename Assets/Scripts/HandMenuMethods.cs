@@ -21,25 +21,24 @@ public class HandMenuMethods : MonoBehaviour
         prevIndex = index;
     }
 
-    public void BoxnBlocksPositioning()
+    public void TestPositioning(int index)
     {
-        if (PositionController.Instance.BuildState)
-        {
-            Debug.Log("BoxandBloxhasbeenplanted");
-        }
         Vector3 rightPos = PositionController.Instance.getRightPos();
         testPosition = new Vector3(rightPos.x/2, transform.localPosition.y, rightPos.z + 0.1f);
         
         table = GameObject.Find("TableParent(Clone)");
             
-        testPrefabs[1].gameObject.transform.GetChild(0).gameObject.transform.position = new Vector3(table.transform.localPosition.x, table.transform.localPosition.y + 0.05f, table.transform.localPosition.z);
-        testPrefabs[1].gameObject.transform.GetChild(0).gameObject.transform.rotation = table.transform.localRotation;
-        Debug.Log("The Table Position is: " + table.transform.localRotation);
+        testPrefabs[index].gameObject.transform.GetChild(0).gameObject.transform.position = new Vector3(table.transform.localPosition.x, table.transform.localPosition.y + 0.05f, table.transform.localPosition.z);
+        testPrefabs[index].gameObject.transform.GetChild(0).gameObject.transform.rotation = table.transform.localRotation;
     }
     
     public void StoppingTime()
     {
-        Countdown.timerRunning = false;
+        if (Countdown.timerRunning)
+        {
+            Countdown.timerRunning = false;
+        }
+        
     }
 
     public void StartTest()
@@ -47,6 +46,10 @@ public class HandMenuMethods : MonoBehaviour
         if (!Countdown.timerRunning && testPrefabs[1].gameObject.activeInHierarchy)
         {
             Countdown.timerRunning = true;
+        }
+        if (Countdown.timerRunning)
+        {
+            Countdown.timerRunning = false;
         }
     }
 }

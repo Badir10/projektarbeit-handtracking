@@ -9,7 +9,6 @@ public class CollisionCounter : MonoBehaviour
     public int collisionCount = 0;
     public Text countDisplay;
     
-    // Start is called before the first frame update
     void Start()
     {
         //countDisplay = GameObject.Find("BoxCount").GetComponent<Text>();
@@ -34,7 +33,7 @@ public class CollisionCounter : MonoBehaviour
         if (other.gameObject.CompareTag("Collision"))
         {
             //Wieder hinzufügen!
-            collisionCount--;
+            //collisionCount--;
         }
     }
 }
