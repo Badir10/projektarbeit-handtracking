@@ -7,6 +7,7 @@ public class HandMenuMethods : MonoBehaviour
 {
     public List<GameObject> testPrefabs;
     private int prevIndex;
+    private GameObject testInstance;
 
     private Vector3 testPosition;
     private GameObject table;
@@ -16,9 +17,22 @@ public class HandMenuMethods : MonoBehaviour
 
     public void DisplayTest(int index)
     {
-        testPrefabs[prevIndex].gameObject.SetActive(false);
-        testPrefabs[index].gameObject.SetActive(true);
-        prevIndex = index;
+        Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        //Ursprüngliche Lösung
+        //testPrefabs[prevIndex].gameObject.SetActive(false);
+        //testPrefabs[index].gameObject.SetActive(true);
+
+        //Elegantere Lösung, so befinden sich nur die notwendigen Tests in der Szene und die alten werden gelöscht.
+        if (testInstance != null)
+        {
+            Debug.Log(testInstance.GetInstanceID());
+            Destroy(testInstance);
+            //prevIndex = index;
+        }
+        
+        testInstance = Instantiate(testPrefabs[index]);
+
+        
     }
 
     public void TestPositioning(int index)

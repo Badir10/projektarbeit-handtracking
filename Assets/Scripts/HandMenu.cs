@@ -9,16 +9,23 @@ public class HandMenu : MonoBehaviour
     public UnityEvent middleEvent;
     public UnityEvent ringEvent;
     public UnityEvent pinkyEvent;
-    
     public UnityEvent defaultEvent;
+    
 
     private OVRHand hand;
     public OVRSkeleton skeleton;
+    [SerializeField] private SkinnedMeshRenderer handMesh;
+
 
     public GameObject[] handmenuItems;
     public List<Vector3> fingerTipPos;
 
     private bool menuisOpened = false;
+
+    private bool menuEntered = false;
+    private bool prevMenuEntered;
+    private bool pinching = false;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -35,16 +42,18 @@ public class HandMenu : MonoBehaviour
         bool isRingFingerPinching = hand.GetFingerIsPinching(OVRHand.HandFinger.Ring);
         bool isMiddleFingerPinching = hand.GetFingerIsPinching(OVRHand.HandFinger.Middle);
         bool isPinkyFingerPinching = hand.GetFingerIsPinching(OVRHand.HandFinger.Pinky);
-
         
         // Menü öffnen, wenn Option gedrückt wird (5 Sekunden Zeigefinger Pinch) und das Menü nicht schon geöffnet ist
         if (OVRInput.GetDown(OVRInput.Button.Start) && !menuisOpened)
         {
+            handMesh.materials[0].color = Color.green;
             menuisOpened = true;
+            pinching = true;
         }
         else if (OVRInput.GetDown(OVRInput.Button.Start) && menuisOpened)
         {
             menuisOpened = false;
+            handMesh.materials[0].color = Color.white;
         }
         
         
@@ -53,47 +62,32 @@ public class HandMenu : MonoBehaviour
         //Events werden durchgegeben
         if (menuisOpened)
         {
-            if (gameObject.name == "OVRHandPrefab")
-            {
-                LerpMenuItems();
-            }
+            if (gameObject.name == "OVRHandPrefab") LerpMenuItems();
             
-            //Events aktivieren bei Pinch - schönere Lösung finden!
+            //Events aktivieren bei Pinch - Code wird hier kürzer dargestellt, da sonst zu lang
             if (isIndexFingerPinching)
             {
-                indexEvent.Invoke();
+                if (!pinching)
+                {
+                    PinchEvent(indexEvent);
+                }
             }
             else
             {
                 defaultEvent.Invoke();
+                pinching = false;
             }
             
-            if (isRingFingerPinching)
-            {
-                ringEvent.Invoke();
-            }
-            else
-            {
-                defaultEvent.Invoke();
-            }
+
+            if (isRingFingerPinching) PinchEvent(ringEvent);
+            else defaultEvent.Invoke();
             
-            if (isMiddleFingerPinching)
-            {
-                middleEvent.Invoke();
-            }
-            else
-            {
-                defaultEvent.Invoke();
-            }
+            if (isMiddleFingerPinching) PinchEvent(middleEvent);
+            else defaultEvent.Invoke();
             
-            if (isPinkyFingerPinching)
-            {
-                pinkyEvent.Invoke();
-            }
-            else
-            {
-                defaultEvent.Invoke();
-            }
+            if (isPinkyFingerPinching) PinchEvent(pinkyEvent);
+            else defaultEvent.Invoke();
+            
         }
         else
         {
@@ -107,7 +101,6 @@ public class HandMenu : MonoBehaviour
                 } 
             }
         }
-
     }
 
     void LerpMenuItems()
@@ -148,5 +141,11 @@ public class HandMenu : MonoBehaviour
                 handmenuItems[3].transform.position = fingerTipPos[3];
             }
         }
+    }
+    void PinchEvent(UnityEvent myevent)
+    {
+        menuisOpened = false;
+        handMesh.materials[0].color = Color.white;
+        myevent.Invoke();
     }
 }
