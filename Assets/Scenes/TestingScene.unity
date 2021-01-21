@@ -1131,6 +1131,11 @@ MonoBehaviour:
         m_Calls: []
   debugMode: 1
   hand: {fileID: 0}
+--- !u!1 &484137006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5211618549819582312, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+  m_PrefabInstance: {fileID: 1910007977}
+  m_PrefabAsset: {fileID: 0}
 --- !u!137 &498277724 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 137338082485951984, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
@@ -1268,8 +1273,10 @@ MonoBehaviour:
   defaultEvent:
     m_PersistentCalls:
       m_Calls: []
+  handmenuSprites: []
   skeleton: {fileID: 0}
   handMesh: {fileID: 0}
+  menuFocused: {r: 0, g: 0, b: 0, a: 0}
   handmenuItems:
   - {fileID: 1168890745}
   - {fileID: 500672645}
@@ -1654,6 +1661,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &732458112 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 649708255265647119, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+  m_PrefabInstance: {fileID: 1910007977}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &744534131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1856,8 +1868,14 @@ MonoBehaviour:
   defaultEvent:
     m_PersistentCalls:
       m_Calls: []
+  handmenuSprites:
+  - {fileID: 1956349067}
+  - {fileID: 484137006}
+  - {fileID: 1994256427}
+  - {fileID: 732458112}
   skeleton: {fileID: 0}
   handMesh: {fileID: 498277724}
+  menuFocused: {r: 0.766306, g: 1, b: 0.6556604, a: 0}
   handmenuItems:
   - {fileID: 1168890745}
   - {fileID: 500672645}
@@ -1882,7 +1900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabBegin: 0.55
   grabEnd: 0.35
-  m_parentHeldObject: 1
+  m_parentHeldObject: 0
   m_moveHandPosition: 0
   m_gripTransform: {fileID: 773759472}
   m_grabVolumes:
@@ -3243,10 +3261,15 @@ MonoBehaviour:
   - {fileID: 5510193045569418844, guid: 2c66b67f13d04c14da8dd1bcad2e580c, type: 3}
   - {fileID: 733459262257723704, guid: a0db70e7cd3355e43ba7bc694d91578b, type: 3}
   testAnweisungen:
-  - Greife die Objekte vor dir und versuche dich mit den controls vertraut zu machen
-  - Um den Test zu starten mache den daumen Hoch mit deiner rechten Hand
-  - 
-  - 
+  - "Mache dich mit den Grabbern vertraut: Beim Controller ist es die Taste die du
+    mit dem Mittelfinger ber\xFChrst. Beim Handtracking Kneift man die Objekte."
+  - "Daumen-Hoch: Test wird gestartet. Versuche in einer Minute so viele Boxen wie
+    m\xF6glich von der einen Seite in die andere zu schaffen."
+  - "Daumen-Hoch: Test wird gestartet. Versuche so schnell wie m\xF6glich alle Boxen
+    der gr\xF6\xDFe nach aufeinander zu stapeln. Stoppe dann mit Daumen-Hoch die
+    Zeit."
+  - "Daumen-Hoch Test wird gestartet. Hei\xDFer Draht, versuche so schnell wie m\xF6glich
+    den Ring von der einen zur anderen Seite zu bringen ohne den Draht zu ber\xFChren."
   testAnweisungenDisplay: {fileID: 1905188685}
 --- !u!114 &1775806369
 MonoBehaviour:
@@ -3547,8 +3570,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905188683}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10.92}
-  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
+  m_LocalPosition: {x: 0, y: 0, z: -11.2}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 1648839159}
   m_Father: {fileID: 1740922054}
@@ -3556,7 +3579,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.02}
+  m_AnchoredPosition: {x: 0, y: -1.727}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1905188685
@@ -3579,10 +3602,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Erstelle einen Tisch bevor du mit den Tests startest:\nMit dem Controller
-    die untere linke Ecke des Tisches ber\xFChren und Trigger dr\xFCcken (hinterer
-    Schulterknopf). Dasselbe mit der unteren rechten und oberen rechten Ecke des
-    Tisches tun.\n"
+  m_text: "Erstelle einen Tisch bevor du mit den Tests startest:\nDie Tests erreichst
+    du beim Controller-Tracking mit dem Options-Button am Linken Controller und beim
+    Handtracking betrachtest du deine linke Hand und ber\xFChrst Daumen und Zeigefinger
+    bis sich der Kreis f\xFCllt.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3730,8 +3753,38 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4ce62df06b5955849837b9e493d373b1, type: 2}
+    - target: {fileID: 649708255265647119, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531840993324731216, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211618549819582312, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261673764009619270, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7780708439017565583, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+--- !u!1 &1956349067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7261673764009619270, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+  m_PrefabInstance: {fileID: 1910007977}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1994256427 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3531840993324731216, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+  m_PrefabInstance: {fileID: 1910007977}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2039227024
 PrefabInstance:
   m_ObjectHideFlags: 0

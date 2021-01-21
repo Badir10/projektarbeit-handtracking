@@ -10,14 +10,17 @@ public class HandMenu : MonoBehaviour
     public UnityEvent ringEvent;
     public UnityEvent pinkyEvent;
     public UnityEvent defaultEvent;
+
+    public List<GameObject> handmenuSprites;
     
 
     private OVRHand hand;
     public OVRSkeleton skeleton;
     [SerializeField] private SkinnedMeshRenderer handMesh;
+    [SerializeField] private Color menuFocused;
 
 
-    public GameObject[] handmenuItems;
+    [SerializeField] private GameObject[] handmenuItems;
     public List<Vector3> fingerTipPos;
 
     private bool menuisOpened = false;
@@ -46,7 +49,12 @@ public class HandMenu : MonoBehaviour
         // Menü öffnen, wenn Option gedrückt wird (5 Sekunden Zeigefinger Pinch) und das Menü nicht schon geöffnet ist
         if (OVRInput.GetDown(OVRInput.Button.Start) && !menuisOpened)
         {
-            handMesh.materials[0].color = Color.green;
+            handMesh.materials[0].color = menuFocused;
+            foreach (GameObject go in handmenuSprites)
+            {
+                go.SetActive(true);
+            }
+            
             menuisOpened = true;
             pinching = true;
         }
@@ -54,6 +62,7 @@ public class HandMenu : MonoBehaviour
         {
             menuisOpened = false;
             handMesh.materials[0].color = Color.white;
+            foreach (GameObject go in handmenuSprites) go.SetActive(false);
         }
         
         
@@ -146,6 +155,8 @@ public class HandMenu : MonoBehaviour
     {
         menuisOpened = false;
         handMesh.materials[0].color = Color.white;
+        foreach (GameObject go in handmenuSprites) go.SetActive(false);
+        
         myevent.Invoke();
     }
 }
