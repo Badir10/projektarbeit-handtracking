@@ -72,8 +72,7 @@ public class HandMenuMethods : MonoBehaviour
         {
             Countdown.timerRunning = true;
         }
-
-        if (Countdown.timerRunning && testInstance.name == "StackObjects(Clone)")
+        else if (Countdown.timerRunning && testInstance.name == "StackObjects(Clone)")
         {
             Countdown.timerRunning = false;
         }

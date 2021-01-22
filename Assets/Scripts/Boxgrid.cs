@@ -15,7 +15,6 @@ public class Boxgrid : MonoBehaviour
 
     public static bool boxcreated = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         CreateBox();
@@ -36,11 +35,7 @@ public class Boxgrid : MonoBehaviour
                 }
             }
         }
-
         boxcreated = true;
     }
 
-    private void Update()
-    {
-    }
 }
