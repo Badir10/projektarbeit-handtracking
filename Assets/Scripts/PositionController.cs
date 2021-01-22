@@ -267,25 +267,24 @@ public class PositionController : MonoBehaviour
 
     private void PositionTableWithStick(){
         // Der Nutzer die Möglichkeit in der Methode die Punkte mit dem Controller Stick, die Höhe (Y-coordinate) vom Tisch zu verstellen.
-        Vector2 primaryAxis = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
         Vector2 secondaryAxis = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
         // UP 0,99 -- DOWN -0,99
 
         // Wenn der Controller Stick unberührt ist, soll tablePosBool auf false gesetzt werden
         // Das ist dafür da, um die Buttons, die auf dem Tisch sind (Die Kind-Objekte) mit auf der Höhe des Tisches zu skalieren. 
-        if(primaryAxis.y == 0 && secondaryAxis.y == 0){
+        if(secondaryAxis.y == 0){
             tablePosBool = false;
         }
 
         // Wenn der Controller Stick nach oben gerichtet ist, soll die Y Position von dem Tisch pro Fram um 0.0002f erhöht werden.
         // Das ist dazu da, um die Höhe des Tisches, nach der Erstellung, korrekt zu justieren.
-        if(primaryAxis.y > 0.9f || secondaryAxis.y > 0.9f){
+        if(secondaryAxis.y > 0.9f){
             tablePlaneInstance.transform.position = new Vector3(tablePlaneInstance.transform.position.x, tablePlaneInstance.transform.position.y + 0.0002f, tablePlaneInstance.transform.position.z);
             tablePosBool = true;
         }
 
         // Das ist die gleiche Bedinungung nur, dass der Stick vom Controller nach unten zeigt und die Tisch Höhe um 0.0002f verringert
-        if(primaryAxis.y < -0.9f || secondaryAxis.y < -0.9f){
+        if(secondaryAxis.y < -0.9f){
             tablePlaneInstance.transform.position = new Vector3(tablePlaneInstance.transform.position.x, tablePlaneInstance.transform.position.y - 0.0002f, tablePlaneInstance.transform.position.z);
             tablePosBool = true;
         }

@@ -30,7 +30,11 @@ public class HandMenuMethods : MonoBehaviour
         //Elegantere Lösung, so befinden sich nur die notwendigen Tests in der Szene und die alten werden gelöscht.
         if (testInstance != null)
         {
-            Debug.Log(testInstance.GetInstanceID());
+            Debug.Log(testInstance.gameObject.name);
+            
+            //wenn ich diesen Schritt nicht mache, dann kann es passieren, dass die Hand mit dem zu löschenden Objekt kollidiert
+            //und dabei der Collider der Hand ebenfalls mitgelöscht wird (wegen des Grabbers)
+            //testInstance.transform.position = new Vector3(100, 100, 100);
             Destroy(testInstance);
         }
         
