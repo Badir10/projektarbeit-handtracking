@@ -13,8 +13,8 @@ public class StopTest : MonoBehaviour
 
     void Update()
     {
-        objectRB.constraints = RigidbodyConstraints.FreezeAll;
-        
+        if (!Countdown.timerRunning) objectRB.constraints = RigidbodyConstraints.FreezeAll;
+
         if (Countdown.timerRunning) objectRB.constraints = RigidbodyConstraints.None;
     }
 }
