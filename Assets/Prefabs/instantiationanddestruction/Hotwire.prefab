@@ -1479,7 +1479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d23a43429556644f8be1f2406392079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remainingTime: 60
+  remainingTime: 30
   countdown: 1
   maxtime: 600
 --- !u!1 &733459262882887272
@@ -4082,6 +4082,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionCount: 0
   countDisplay: {fileID: 733459263214062373}
+  grab: {fileID: 0}
+  grabbers: []
 --- !u!54 &733459263424952828
 Rigidbody:
   m_ObjectHideFlags: 0

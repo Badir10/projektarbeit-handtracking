@@ -9,8 +9,12 @@ public class Boxgrid : MonoBehaviour
     [SerializeField] private int depth = 7;
     [SerializeField] private int height = 3;
     [SerializeField] private float distance = 0.02f;
+    
+    //Liste in der alle Gameobjects gespeichert werden. Wichtig um diese in anderen Skripts bearbeiten zu können
+    //ohne eine Find methode verwenden zu müssen, welche bei 150 Objekten teuer wäre
     public List<GameObject> blocks;
     
+    //Gameobject welches in der Grid erstellt werden soll
     public GameObject box;
 
     public static bool boxcreated = false;
@@ -20,6 +24,8 @@ public class Boxgrid : MonoBehaviour
         CreateBox();
     }
     
+    //Erstellt das oben eingespeicherte Gameobject in einem Raster von width x depth x height, die werte können
+    //im Editor eingestellt werden für bessere Optimierung
     public void CreateBox()
     {
         for (int x = 0; x < width; x++)

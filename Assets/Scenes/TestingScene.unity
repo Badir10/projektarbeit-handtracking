@@ -3595,14 +3595,18 @@ MonoBehaviour:
   - {fileID: 733459262257723704, guid: a0db70e7cd3355e43ba7bc694d91578b, type: 3}
   testAnweisungen:
   - "Mache dich mit den Grabbern vertraut: Beim Controller ist es die Taste die du
-    mit dem Mittelfinger ber\xFChrst. Beim Handtracking Kneift man die Objekte."
-  - "Daumen-Hoch: Test wird gestartet. Versuche in einer Minute so viele Boxen wie
-    m\xF6glich von der einen Seite in die andere zu schaffen."
-  - "Daumen-Hoch: Test wird gestartet. Versuche so schnell wie m\xF6glich alle Boxen
-    der gr\xF6\xDFe nach aufeinander zu stapeln. Stoppe dann mit Daumen-Hoch die
-    Zeit."
-  - "Daumen-Hoch Test wird gestartet. Hei\xDFer Draht, versuche so schnell wie m\xF6glich
-    den Ring von der einen zur anderen Seite zu bringen ohne den Draht zu ber\xFChren."
+    mit dem Mittelfinger ber\xFChrst. Beim Handtracking kneift man die Objekte (Zeigefinger
+    mit Daumen ber\xFChren)."
+  - "Daumen-Hoch-Geste (Handtracking) / X-Knopf (Controller): Test wird gestartet.
+    Versuche in einer Minute so viele Bl\xF6cke wie m\xF6glich von der einen Seite
+    in die Andere zu schaffen."
+  - "Daumen-Hoch-Geste (Handtracking) / X-Knopf (Controller): Test wird gestartet.
+    Versuche so schnell wie m\xF6glich alle Boxen der Gr\xF6\xDFe nach aufeinander
+    zu stapeln (gr\xF6\xDFte Box unten kleinste Box oben). Stoppe dann mit der Daumen-Hoch-Geste
+    / dem X-Knopf  die Zeit."
+  - "Daumen-Hoch-Geste (Handtracking) / X-Knopf (Controller): Test wird gestartet.
+    Hei\xDFer Draht, versuche so schnell wie m\xF6glich den Ring von der einen zur
+    anderen Seite zu bringen ohne den Draht zu ber\xFChren."
   testAnweisungenDisplay: {fileID: 1905188685}
 --- !u!114 &1775806369
 MonoBehaviour:
@@ -4275,9 +4279,33 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2431801321069186564, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.1509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 2431801321069186564, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.1509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 2431801321069186564, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.1509434
+      objectReference: {fileID: 0}
     - target: {fileID: 3531840993324731216, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3699151436592941508, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.1509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 3699151436592941508, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.1509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 3699151436592941508, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.1509434
       objectReference: {fileID: 0}
     - target: {fileID: 5211618549819582312, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
       propertyPath: m_IsActive
@@ -4287,9 +4315,33 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7567410115290120988, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.1509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567410115290120988, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.1509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567410115290120988, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.1509434
+      objectReference: {fileID: 0}
     - target: {fileID: 7780708439017565583, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8854289456542655256, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.1509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 8854289456542655256, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.1509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 8854289456542655256, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.1509434
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6a74181d4000004887343fb87b3c53a, type: 3}

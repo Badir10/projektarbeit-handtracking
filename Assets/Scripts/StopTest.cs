@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class StopTest : MonoBehaviour
 {
+    //dieses Skript sperrt die Tests, wenn der Timer nicht läuft.
+
     private Rigidbody objectRB;
 
     void Start()
