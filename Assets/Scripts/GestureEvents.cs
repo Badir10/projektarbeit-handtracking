@@ -7,6 +7,7 @@ public class GestureEvents : MonoBehaviour
 {
     //Dies war ein Testskript mit dem ich zum Anfang schnell testen konnte wie gut das Handtracking reagiert
     //Es spawnt objekte und ändert die Farbe eines Kubus
+    //dieses Skript ist am Anfang erstellt worden und es befinden sich viele Methoden darin, welche als nicht elegant angesehen werden könnten: S. ChangeColorBack()
     public List<GameObject> prefabs;
     public GameObject cube;
     public List<Color> colors;
