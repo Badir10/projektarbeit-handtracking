@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class HandMenu : MonoBehaviour
 {
+    //Dieses Skript beschreibt das Menü, welches mit dem Handtracking verwendet wird dies funktioniert ähnlich
+    //wie das Radial-Menu
     public UnityEvent indexEvent;
     public UnityEvent middleEvent;
     public UnityEvent ringEvent;
@@ -12,13 +14,11 @@ public class HandMenu : MonoBehaviour
     public UnityEvent defaultEvent;
 
     public List<GameObject> handmenuSprites;
-    
 
     private OVRHand hand;
     public OVRSkeleton skeleton;
     [SerializeField] private SkinnedMeshRenderer handMesh;
     [SerializeField] private Color menuFocused;
-
 
     [SerializeField] private GameObject[] handmenuItems;
     public List<Vector3> fingerTipPos;
@@ -30,14 +30,13 @@ public class HandMenu : MonoBehaviour
     private bool pinching = false;
     
     
-    // Start is called before the first frame update
     void Start()
     {
+        //Informationen der Hand-Skripte müssen wieder gespeichert werden, damit auf die Knochen zugegriffen werden kann
         hand = gameObject.GetComponent<OVRHand>();
         skeleton = gameObject.GetComponent<OVRCustomSkeleton>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         //Pinches speichern
@@ -49,7 +48,10 @@ public class HandMenu : MonoBehaviour
         // Menü öffnen, wenn Option gedrückt wird (5 Sekunden Zeigefinger Pinch) und das Menü nicht schon geöffnet ist
         if (OVRInput.GetDown(OVRInput.Button.Start) && !menuisOpened)
         {
+            //Hand wird grün gefärbt, wenn das Menü geöffnet ist
             handMesh.materials[0].color = menuFocused;
+            
+            //Die Icons werden aktiviert
             foreach (GameObject go in handmenuSprites)
             {
                 go.SetActive(true);
@@ -58,6 +60,8 @@ public class HandMenu : MonoBehaviour
             menuisOpened = true;
             pinching = true;
         }
+        
+        //Menü schließen, wenn die Systemgeste ausgelöst wird und das Menü vorher offen war
         else if (OVRInput.GetDown(OVRInput.Button.Start) && menuisOpened)
         {
             menuisOpened = false;
@@ -112,6 +116,7 @@ public class HandMenu : MonoBehaviour
         }
     }
 
+    // Diese Methode positioniert die Menüitems an den Fingerspitzen, wenn die herkömmlichen Hände verwendet werden
     void LerpMenuItems()
     {
         // Alle Menüitems anschalten
@@ -120,6 +125,7 @@ public class HandMenu : MonoBehaviour
             go.SetActive(true);
         }
         
+        //Für jeden Finger die positionen verwenden und die zugehörigen MenüIcons dort platzieren
         foreach(OVRBone bone in skeleton.Bones) {
             if (bone.Id == OVRSkeleton.BoneId.Hand_IndexTip)
             {
@@ -151,6 +157,8 @@ public class HandMenu : MonoBehaviour
             }
         }
     }
+    
+    //Wieder eine ausgelagerte Methode, die es ermöglicht doppelten Code zu sparen
     void PinchEvent(UnityEvent myevent)
     {
         menuisOpened = false;

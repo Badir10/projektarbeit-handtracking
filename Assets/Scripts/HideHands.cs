@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HideHands : MonoBehaviour
 {
+    //Dieses Skript dient dazu die Hände vom Controller zu verstecken, wenn Handtracking aktiviert wird und andersherum
+    //Dies wurde ursprünglich automatisch übernommen, da ich allerdings custom Hands verwende fürs tracking musste
+    //ich dies selbst schreiben
     [SerializeField] private OVRHand handscript;
     [SerializeField] private OVRHand handscript2;
 

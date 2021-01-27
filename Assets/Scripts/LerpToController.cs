@@ -7,14 +7,12 @@ using UnityEngine.UIElements;
 
 public class LerpToController : MonoBehaviour
 {
+    
+    //Erstes Skript um den Tisch zu projizieren. Wurde durch das Skript eines Komilitonen ersetzt (PositionController)
+    //Dieses Skript diente zu Testzwecken
     public GameObject rightController;
     private GameObject table;
 
-    private void Start()
-    {
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (OVRInput.GetDown(OVRInput.Button.Two))

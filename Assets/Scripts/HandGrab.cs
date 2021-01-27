@@ -5,8 +5,8 @@ using OculusSampleFramework;
 
 public class HandGrab : OVRGrabber
 {
-    ///// diese Klasse erbt von dem Oculus OVRGrabber und aendert ihn so, dass er mit Handtracking funktionieren kann /////
-    /// 
+    //diese Klasse erbt von dem Oculus OVRGrabber und aendert ihn so, dass er mit Handtracking funktionieren kann 
+    //
     
     private OVRHand hand;
 
@@ -44,7 +44,6 @@ public class HandGrab : OVRGrabber
         // Vorher Grabber zu groß und Dinge wurden an falsche Position platziert beim grabben.
         
         // Geht alle "Knochen"-Punkte und Positionen durch und nimmt sich die Position der Zeigefingerspitze
-
         if (gameObject.name == "OVRHandPrefab")
         {
             foreach(OVRBone bone in skeleton.Bones) {
